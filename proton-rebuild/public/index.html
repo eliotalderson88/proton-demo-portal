@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2bb7b5">
+  <title>Banco Proton — Iniciá sesión</title>
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+  <link rel="shortcut icon" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page" aria-label="Acceso a Banco Proton">
+    <svg class="ornaments" viewBox="0 0 1920 1080" preserveAspectRatio="none" aria-hidden="true">
+      <g class="line green">
+        <path d="M289 472 L435 386 Q486 356 486 418 L486 493"/><path d="M305 520 L427 449 Q434 445 434 458 L434 496"/>
+        <path d="M480 528 L612 449 Q666 416 666 480 L666 552"/><path d="M496 576 L614 505 Q623 500 623 515 L623 553"/>
+        <path d="M290 902 L434 814 Q485 784 485 847 L485 923"/><path d="M305 949 L427 878 Q434 874 434 887 L434 925"/>
+        <path d="M480 906 L612 827 Q666 794 666 858 L666 930"/><path d="M496 954 L614 883 Q623 878 623 893 L623 931"/>
+        <path d="M1284 360 L1416 281 Q1470 249 1470 315 L1470 386"/><path d="M1300 407 L1422 336 Q1430 331 1430 346 L1430 389"/>
+        <path d="M1284 618 L1416 539 Q1470 507 1470 571 L1470 643"/><path d="M1300 666 L1422 595 Q1430 590 1430 605 L1430 646"/>
+      </g>
+      <g class="line cyan">
+        <path d="M289 788 L435 702 Q486 672 486 734 L486 807"/><path d="M305 837 L427 765 Q434 761 434 774 L434 810"/>
+        <path d="M480 966 L612 887 Q666 854 666 918 L666 990"/><path d="M496 1012 L614 941 Q623 936 623 951 L623 989"/>
+        <path d="M1284 476 L1416 397 Q1470 365 1470 429 L1470 501"/><path d="M1300 524 L1422 453 Q1430 448 1430 463 L1430 504"/>
+        <path d="M1284 760 L1416 681 Q1470 649 1470 713 L1470 785"/><path d="M1300 808 L1422 737 Q1430 732 1430 747 L1430 788"/>
+      </g>
+    </svg>
+
+    <section class="login-card">
+      <header class="brand-bar">
+        <div class="brand-lockup"><span>Banco <strong>Proton</strong></span><img class="brand-mark" src="assets/proton-mark.png" alt="" aria-hidden="true"></div>
+      </header>
+
+      <div class="card-content">
+        <h1>Iniciá sesión</h1>
+        <form id="login-form" autocomplete="on" novalidate>
+          <div class="field-group">
+            <label for="username">Tu usuario <span class="required">*</span></label>
+            <div class="input-wrap"><input id="username" name="username" type="text" placeholder="Ingresá tu nombre de usuario" autocomplete="username" required></div>
+          </div>
+          <div class="field-group password-group">
+            <label for="password">Tu clave <span class="required">*</span></label>
+            <div class="input-wrap password-wrap">
+              <input id="password" name="password" type="password" placeholder="Ingresá tu clave" autocomplete="current-password" required>
+              <button class="visibility-toggle" id="toggle-password" type="button" aria-label="Mostrar clave" title="Mostrar u ocultar clave">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.2 12s3.5-6 9.8-6 9.8 6 9.8 6-3.5 6-9.8 6-9.8-6-9.8-6Z"/><circle cx="12" cy="12" r="2.7"/><path class="slash" d="M4 20 20 4"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <button class="virtual-keyboard-trigger" id="keyboard-trigger" type="button" aria-expanded="false" aria-controls="virtual-keyboard"><span>Teclado Virtual</span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M5 9h1m3 0h1m3 0h1m3 0h1M5 12h1m3 0h1m3 0h1m3 0h1M7 15h10"/></svg></button>
+
+          <section class="keyboard-panel" id="virtual-keyboard" hidden aria-label="Teclado virtual">
+            <div class="keyboard-rows" id="keyboard-rows"></div>
+          </section>
+
+          <button class="submit-button" type="submit">Ingresar</button>
+        </form>
+
+        <nav class="links" aria-label="Ayuda y accesos">
+          <p class="register-line">¿No sos PIP? <a href="#registrate">Registrate</a></p>
+          <p class="forgot-line"><a href="#recuperar">Bloqueé u olvidé mi usuario y/o clave</a></p>
+          <div class="resource-links">
+            <a href="#conoce">Conocé como hacerte usuario u operar</a>
+            <a href="#seguridad">Recomendaciones de seguridad</a>
+          </div>
+        </nav>
+        <p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+  <script src="app.js" defer></script>
+</body>
+</html>
